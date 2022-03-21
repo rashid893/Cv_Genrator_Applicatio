@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+
+      <!-- Font Awesome CSS -->
+      <link rel="stylesheet" href="{% static '/css/all.min.css' %}">
+      
+    <title>Cv Genrator</title>
+  <style>
+    #sc{
+      color:green;
+      font-weight:bold;
+      background-color:green;
+      color:white;
+    }
+  </style>
+  </head>
+  <body>
+  
+  
+  
+  
+    
+    <div class="container">
+      <h2>Online Cv Genrator System</h2>
+      <div class="row">
+        <div class="col-md-7">
+
+      
+
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="from-group">
+        <label for="">Name</label>
+        <input type="text" name="name"  required class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="">Email</label>
+        <input type="email" name="email" required  class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="">Phone</label>
+        <input type="text" name="phone" class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="name">about Your</label>
+    <textarea name="summary" id=""  class="form-control"cols="5" rows="5"></textarea>
+      </div>
+      
+      <div class="from-group">
+        <label for="">Degree</label>
+        <input type="text" name="degree" class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="">School</label>
+        <input type="text" name="school" class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="">university</label>
+        <input type="text" name="university" class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="">prevoius</label>
+        <input type="text" name="previous" class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="">Skills</label>
+        
+      <textarea name="skills" id="" class="form-control" cols="5" rows="5"></textarea>
+      </div>
+      <input type="submit" class="btn btn-primary">
+
+     
+      </form>
+      <span id="sc">{{msg}}</span>
+     
+    </div>
+  </div>
+</div>
+
+    
+  
+  
+  
+  <script  src="{% static 'js/jquery.min.js' %}"></script>
+  
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/all.min.js' %}"></script>
+</body>
+</html>
